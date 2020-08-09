@@ -3,7 +3,7 @@
     "id": "bibliogram",
     "packaging_format": 1,
     "description": {
-        "en": "Collaborative editor to work on notes written in Markdown",
+        "en": "Website that takes data from Instagram's public profile views and puts it into a friendlier page",
         "fr": "Éditeur collaboratif pour travailler sur des notes en Markdown"
     },
     "version": "1.6.0~ynh4",

@@ -23,13 +23,13 @@ about: Create a report to help us debug, it would be nice to fill the template a
 - Are you in a special context or did you perform some particular tweaking on your YunoHost instance ?: *no / yes*
   - If yes, please explain:
 - Using, or trying to install package version/branch:
-- If upgrading, current package version: *can be found in the admin, or with `yunohost app info hedgedoc`*
+- If upgrading, current package version: *can be found in the admin, or with `yunohost app info bibliogram`*
 
 **To Reproduce**
 *Steps to reproduce the behavior.*
 - *If you performed a command from the CLI, the command itself is enough. For example:*
     ```sh
-    sudo yunohost app install codimd
+    sudo yunohost app install bibliogram
     ```
 - *If you used the webadmin, please perform the equivalent command from the CLI first.*
 - *If the error occurs in your browser, explain what you did:*

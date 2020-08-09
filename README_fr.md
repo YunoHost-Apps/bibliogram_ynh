@@ -1,62 +1,63 @@
-# HedgeDoc pour YunoHost
+# Bibliogram pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/hedgedoc.svg)](https://dash.yunohost.org/appci/app/hedgedoc) ![](https://ci-apps.yunohost.org/ci/badges/hedgedoc.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/hedgedoc.maintain.svg)  
-[![Installer HedgeDoc avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=hedgedoc)
+[![Niveau d'intégration](https://dash.yunohost.org/integration/bibliogram.svg)](https://dash.yunohost.org/appci/app/bibliogram) ![](https://ci-apps.yunohost.org/ci/badges/bibliogram.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/bibliogram.maintain.svg)  
+[![Installer Bibliogram avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=bibliogram)
 
 *[Read this readme in english.](./README.md)* 
 
-> *Ce package vous permet d'installer HedgeDoc rapidement et simplement sur un serveur YunoHost.  
+> *Ce package vous permet d'installer Bibliogram rapidement et simplement sur un serveur YunoHost.  
 Si vous n'avez pas YunoHost, consultez [le guide](https://yunohost.org/#/install) pour apprendre comment l'installer.*
 
 ## Vue d'ensemble
-HedgeDoc est un service web de traitement de texte collaboratif en temps réel. Il utilise le langage Markdown.
 
-**Version incluse :** 1.6.0
+Bibliogram est un site Web qui prend les données de profil public d'Instagram et les met dans une page plus conviviale qui se charge plus rapidement, donne des images téléchargeables, élimine les publicités, génère des flux RSS et ne vous invite pas à vous inscrire.
+
+**Version incluse :** 
 
 ## Captures d'écran
 
-![](https://demo.hedgedoc.org/screenshot.png)
+![]()
 
 ## Démo
 
-* [Démo officielle](https://demo.hedgedoc.org/)
+* [Démo officielle]()
 
 ## Configuration
 
-Vous pouvez configurer HedgeDoc en modifiant le fichier `/var/www/hedgedoc/config.json` et en vous aidant de la [documentation](https://github.com/hedgedoc/server/blob/master/docs/configuration.md)
+Vous pouvez configurer Bibliogram en modifiant le fichier `/var/www/bibliogram/config.js` et en vous aidant de la [documentation]()
 
 ## Documentation
 
- * Documentation officielle : https://github.com/hedgedoc/server/tree/master/docs/
- * Documentation YunoHost : https://yunohost.org/#/app_codimd_fr
+ * Documentation officielle : https://git.sr.ht/~cadence/bibliogram-docs
+ * Documentation YunoHost : https://yunohost.org/#/app_bibliogram_fr
 
 ## Caractéristiques spécifiques YunoHost
 
 #### Support multi-utilisateur
 
-* L'authentification LDAP est-elle prise en charge ? **Oui**
-* L'application peut-elle être utilisée par plusieurs utilisateurs ? **Oui**
+* L'authentification LDAP est-elle prise en charge ?
+* L'application peut-elle être utilisée par plusieurs utilisateurs ?
 
 #### Architectures supportées
 
-* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/hedgedoc%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/hedgedoc/)
-* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/hedgedoc%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/hedgedoc/)
+* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/bibliogram%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/bibliogram/)
+* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/bibliogram%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/bibliogram/)
 
 ## Liens
 
- * Signaler un bug : https://github.com/YunoHost-Apps/hedgedoc_ynh/issues
- * Dépôt de l'application principale : https://github.com/hedgedoc/server/
+ * Signaler un bug : https://github.com/YunoHost-Apps/bibliogram_ynh/issues
+ * Dépôt de l'application principale : https://git.sr.ht/~cadence/bibliogram
  * Site web YunoHost : https://yunohost.org/
 
 ---
 
 ## Informations pour les développeurs
 
-Merci de faire vos pull request sur la [branche testing](https://github.com/YunoHost-Apps/hedgedoc_ynh/tree/testing).
+Merci de faire vos pull request sur la [branche testing](https://github.com/YunoHost-Apps/bibliogram_ynh/tree/testing).
 
 Pour essayer la branche testing, procédez comme suit.
 ```
-sudo yunohost app install https://github.com/YunoHost-Apps/hedgedoc_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/bibliogram_ynh/tree/testing --debug
 ou
-sudo yunohost app upgrade hedgedoc -u https://github.com/YunoHost-Apps/hedgedoc_ynh/tree/testing --debug
+sudo yunohost app upgrade bibliogram -u https://github.com/YunoHost-Apps/bibliogram_ynh/tree/testing --debug
 ```
