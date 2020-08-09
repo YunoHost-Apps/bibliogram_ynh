@@ -2,7 +2,6 @@
 	; Manifest
 		domain="domain.tld" (DOMAIN)
 		path="/"            (PATH)
-		admin="john"	    (USER)
 		is_public=1	        (PUBLIC|public=1|private=0)
 	; Checks
 		pkg_linter=1
@@ -14,7 +13,7 @@
 		upgrade=1
 		backup_restore=1
 		multi_instance=0
-		port_already_use=1
+		port_already_use=0
 		change_url=1
 ;;; Levels
 	Level 5=auto
