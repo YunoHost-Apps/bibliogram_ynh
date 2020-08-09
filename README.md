@@ -11,7 +11,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 ## Overview
 Bibliogram is a website that takes data from Instagram's public profile views and puts it into a friendlier page that loads faster, gives downloadable images, eliminates ads, generates RSS feeds, and doesn't urge you to sign up.
 
-**Shipped version:** 
+**Shipped version:** 1.0.0
 
 ## Screenshots
 
@@ -19,11 +19,11 @@ Bibliogram is a website that takes data from Instagram's public profile views an
 
 ## Demo
 
-* [Official demo]()
+* [Official demo](https://bibliogram.art/)
 
 ## Configuration
 
-You can configure HedgeDoc by editing this file `/var/www/bibliogram/config.js` using this the [documentation]()
+You can configure Bibliogram by editing this file `/var/www/bibliogram/config.js` using this the [documentation](https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Configuring.md)
 
 ## Documentation
 

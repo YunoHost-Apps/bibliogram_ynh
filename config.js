@@ -6,6 +6,5 @@
 */
 
 module.exports = {
-
 	website_origin: "http://localhost:__PORT__",
 }

@@ -12,7 +12,7 @@ Si vous n'avez pas YunoHost, consultez [le guide](https://yunohost.org/#/install
 
 Bibliogram est un site Web qui prend les données de profil public d'Instagram et les met dans une page plus conviviale qui se charge plus rapidement, donne des images téléchargeables, élimine les publicités, génère des flux RSS et ne vous invite pas à vous inscrire.
 
-**Version incluse :** 
+**Version incluse :** 1.0.0
 
 ## Captures d'écran
 
@@ -20,11 +20,11 @@ Bibliogram est un site Web qui prend les données de profil public d'Instagram e
 
 ## Démo
 
-* [Démo officielle]()
+* [Démo officielle](https://bibliogram.art/)
 
 ## Configuration
 
-Vous pouvez configurer Bibliogram en modifiant le fichier `/var/www/bibliogram/config.js` et en vous aidant de la [documentation]()
+Vous pouvez configurer Bibliogram en modifiant le fichier `/var/www/bibliogram/config.js` et en vous aidant de la [documentation](https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Configuring.md)
 
 ## Documentation
 
