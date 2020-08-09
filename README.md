@@ -34,8 +34,8 @@ You can configure Bibliogram by editing this file `/var/www/bibliogram/config.js
 
 #### Multi-user support
 
-* Is LDAP supported?
-* Can the app be used by multiple users?
+* Is LDAP supported? **No**
+* Can the app be used by multiple users? **Yes**
 
 #### Supported architectures
 

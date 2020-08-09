@@ -35,8 +35,8 @@ Vous pouvez configurer Bibliogram en modifiant le fichier `/var/www/bibliogram/c
 
 #### Support multi-utilisateur
 
-* L'authentification LDAP est-elle prise en charge ?
-* L'application peut-elle être utilisée par plusieurs utilisateurs ?
+* L'authentification LDAP est-elle prise en charge ? **Non**
+* L'application peut-elle être utilisée par plusieurs utilisateurs ? **Oui**
 
 #### Architectures supportées
 

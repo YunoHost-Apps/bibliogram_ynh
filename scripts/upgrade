@@ -69,8 +69,8 @@ then
 	# Remove the app directory securely
 	ynh_secure_remove --file=$final_path
 
-	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir=$final_path
+	# Download from git source
+	git clone https://git.sr.ht/~cadence/bibliogram "$final_path" --quiet
 
 	#Copy the admin saved settings from tmp directory to final path	
 	cp -a "$tmpdir/config.js" "$final_path/config.js" 
@@ -113,7 +113,7 @@ ynh_system_user_create --username=$app
 #==============================================
 if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
-	ynh_script_progression --message="Building $app... (this will take some time and resources!)" --weight=60
+	ynh_script_progression --message="Building $app... (this will take some time and resources!)" --weight=30
 
 	pushd "$final_path" || ynh_die
 		ynh_use_nodejs
