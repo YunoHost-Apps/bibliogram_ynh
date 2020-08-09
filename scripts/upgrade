@@ -64,7 +64,7 @@ then
 	tmpdir="$(mktemp -d)"
 	
 	# Backup the config file in the temp dir
-	cp -a "$final_path/config.json" "$tmpdir/config.js"
+	cp -a "$final_path/config.js" "$tmpdir/config.js"
 	
 	# Remove the app directory securely
 	ynh_secure_remove --file=$final_path
@@ -73,7 +73,7 @@ then
 	ynh_setup_source --dest_dir=$final_path
 
 	#Copy the admin saved settings from tmp directory to final path	
-	cp -a "$tmpdir/config.json" "$final_path/config.js" 
+	cp -a "$tmpdir/config.js" "$final_path/config.js" 
 
 	# Remove the tmp directory securely
 	ynh_secure_remove --file="$tmpdir"
@@ -91,8 +91,6 @@ ynh_add_nginx_config
 # UPGRADE DEPENDENCIES
 #=================================================
 ynh_script_progression --message="Upgrading dependencies..." --weight=18
-
-#ynh_install_app_dependencies $pkg_dependencies
 
 # Install Nodejs
 ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
@@ -164,7 +162,7 @@ chown -R $app:$app $final_path
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..."
 
-yunohost service add $app --description "Collaborative Markdown notes" --log="/var/log/$app/$app.log"
+yunohost service add $app --description "An alternative Instagram front-end" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE

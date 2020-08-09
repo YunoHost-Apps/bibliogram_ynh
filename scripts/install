@@ -65,8 +65,6 @@ ynh_app_setting_set --app=$app --key=port --value=$port
 #=================================================
 ynh_script_progression --message="Installing dependencies..." --weight=20
 
-#ynh_install_app_dependencies $pkg_dependencies
-
 # Install Nodejs
 ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
 
@@ -147,7 +145,7 @@ chown -R $app:$app $final_path
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..."
 
-yunohost service add $app --description "Collaborative Markdown notes" --log="/var/log/$app/$app.log"
+yunohost service add $app --description "An alternative Instagram front-end" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE

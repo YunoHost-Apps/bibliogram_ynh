@@ -15,7 +15,7 @@ Bibliogram is a website that takes data from Instagram's public profile views an
 
 ## Screenshots
 
-![]()
+![](sources/bibliogram.jpg)
 
 ## Demo
 

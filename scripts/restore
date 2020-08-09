@@ -77,10 +77,7 @@ chown -R $app:$app $final_path
 #=================================================
 # REINSTALL DEPENDENCIES
 #=================================================
-ynh_script_progression --message="Reinstalling dependencies..." --weight=7
-
-# Define and install dependencies
-#ynh_install_app_dependencies $pkg_dependencies
+ynh_script_progression --message="Reinstalling dependencies..." --weight=4
 
 # Install Nodejs
 ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
@@ -101,7 +98,7 @@ systemctl enable $app.service
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..."
 
-yunohost service add $app --description "collaborative Markdown editor" --log "/var/log/$app/$app.log"
+yunohost service add $app --description "An alternative Instagram front-end" --log "/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE

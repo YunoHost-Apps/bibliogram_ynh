@@ -1,5 +1,5 @@
 [Unit]
-Description=Bibliogram
+Description=Bibliogram: an alternative Instagram front-end
 After=network.target postgresql.service
 
 [Service]

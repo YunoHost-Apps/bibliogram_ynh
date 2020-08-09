@@ -16,7 +16,7 @@ Bibliogram est un site Web qui prend les données de profil public d'Instagram e
 
 ## Captures d'écran
 
-![]()
+![](sources/bibliogram.jpg)
 
 ## Démo
 
