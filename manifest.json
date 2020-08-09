@@ -4,10 +4,10 @@
     "packaging_format": 1,
     "description": {
         "en": "Website that takes data from Instagram's public profile views and puts it into a friendlier page",
-        "fr": "Éditeur collaboratif pour travailler sur des notes en Markdown"
+        "fr": "Site Web qui prend les données de profil public d'Instagram et les met dans une page plus conviviale"
     },
-    "version": "1.6.0~ynh4",
-    "url": "",
+    "version": "1.0.0~ynh1",
+    "url": "https://git.sr.ht/~cadence/bibliogram",
     "license": "AGPL-3.0-only",
     "maintainer": {
         "name": ""
