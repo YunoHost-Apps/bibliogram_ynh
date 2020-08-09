@@ -107,7 +107,7 @@ ynh_script_progression --message="Building $app... (this will take some time and
 
 pushd "$final_path" || ynh_die
 	ynh_use_nodejs
-	npm install --no-optional
+	yarn install --no-optional
 popd || ynh_die
 
 #=================================================
