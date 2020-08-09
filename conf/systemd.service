@@ -1,6 +1,6 @@
 [Unit]
 Description=Bibliogram: an alternative Instagram front-end
-After=network.target postgresql.service
+After=network.target
 
 [Service]
 Type=simple
@@ -11,8 +11,6 @@ Environment="PATH=__ENV_PATH__"
 Environment="NODE_ENV=production"
 ExecStart=__YNH_NPM__ run start
 Restart=always
-PrivateTmp=true
-PrivateDevices=true
 
 [Install]
 WantedBy=multi-user.target
