@@ -1,0 +1,28 @@
+;; Test complet
+	; Manifest
+		domain="domain.tld"	(DOMAIN)
+		path="/path"    (PATH)
+		admin="john"	(USER)
+		is_public=1	(PUBLIC|public=1|private=0)
+	; Checks
+		pkg_linter=1
+		setup_sub_dir=1
+		setup_root=1
+		setup_nourl=0
+		setup_private=1
+		setup_public=1
+		upgrade=1
+		upgrade=1        from_commit=775a4e239ce382f8c164be48935665af139399e1
+		backup_restore=1
+		multi_instance=1
+		port_already_use=1
+		change_url=1
+;;; Levels
+	Level 5=auto
+;;; Options
+Email=
+Notification=none
+;;; Upgrade options
+	; commit=775a4e239ce382f8c164be48935665af139399e1
+		name=Merge pull request YunoHost-Apps#41 from YunoHost-Apps/testing , 6 Jul 2020
+		manifest_arg=domain=DOMAIN&path=PATH&admin=USER&language=fr&is_public=1&password=pass&port=666&
