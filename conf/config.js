@@ -7,5 +7,5 @@
 
 module.exports = {
 
-	website_origin: "http://localhost:__PORT__",
+	website_origin: "http://127.0.0.1:__PORT__",
 }

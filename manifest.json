@@ -37,8 +37,8 @@
                     "en": "Choose a path for Bibliogram",
                     "fr": "Choisissez un chemin pour Bibliogram"
                 },
-                "example": "/bibliogram",
-                "default": "/bibliogram"
+                "example": "/",
+                "default": "/"
             },
             {
                 "name": "is_public",
