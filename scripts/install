@@ -109,7 +109,6 @@ pushd "$final_path" || ynh_die
 
 	ynh_use_nodejs
 	ynh_npm install --no-optional
-	ynh_exec_warn_less ynh_npm start
 popd || ynh_die
 
 #=================================================
