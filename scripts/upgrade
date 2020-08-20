@@ -90,7 +90,7 @@ ynh_add_nginx_config
 #=================================================
 # UPGRADE DEPENDENCIES
 #=================================================
-ynh_script_progression --message="Upgrading dependencies..." --weight=18
+ynh_script_progression --message="Upgrading dependencies..." --weight=15
 
 # Install Nodejs
 ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
@@ -113,11 +113,11 @@ ynh_system_user_create --username=$app
 #==============================================
 if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
-	ynh_script_progression --message="Building $app... (this will take some time and resources!)" --weight=30
+	ynh_script_progression --message="Building $app... (this will take some time and resources!)" --weight=20
 
 	pushd "$final_path" || ynh_die
 		ynh_use_nodejs
-		yarn install --no-optional
+		ynh_exec_warn_less yarn install --no-optional
 	popd || ynh_die
 fi
 
