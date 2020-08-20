@@ -35,8 +35,8 @@
                 "name": "path",
                 "type": "path",
                 "ask": {
-                    "en": "Choose a path for Bibliogram",
-                    "fr": "Choisissez un chemin pour Bibliogram"
+                    "en": "Choose a path for Bibliogram (for now only / can be used, you need a dedicated domain above)",
+                    "fr": "Choisissez un chemin pour Bibliogram (pour l'instant uniquement / peut-être utilisé, il faut un sous domaine dédié ci-dessus)"
                 },
                 "example": "/",
                 "default": "/"
