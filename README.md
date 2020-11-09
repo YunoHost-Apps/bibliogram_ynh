@@ -43,6 +43,10 @@ You can configure Bibliogram by editing this file `/var/www/bibliogram/config.js
 * x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/bibliogram%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/bibliogram/)
 * ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/bibliogram%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/bibliogram/)
 
+## Limitations
+
+> :warning: This package will not install in 32 bits architecture machine due to *n* framework not supporting NodeJS > v.9
+
 ## Links
 
  * Report a bug: https://github.com/YunoHost-Apps/bibliogram_ynh/issues
