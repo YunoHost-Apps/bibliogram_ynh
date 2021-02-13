@@ -130,11 +130,7 @@ ynh_add_systemd_config
 #=================================================
 ynh_script_progression --message="Modifying a config file..."
 
-cp ../conf/config.js "$final_path/config.js"
-
-# Main config File
-ynh_replace_string --match_string="__DOMAIN__" --replace_string="$domain" --target_file="$final_path/config.js"
-
+ynh_add_config --template="../conf/config.js" --destination="$final_path/config.js"
 ynh_store_file_checksum --file="$final_path/config.js"
 
 #=================================================
@@ -145,7 +141,7 @@ ynh_store_file_checksum --file="$final_path/config.js"
 ynh_script_progression --message="Securing files and directories..."
 
 # Set permissions to app files
-chown -R $app:$app $final_path
+chown -R $app: $final_path
 
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST
@@ -160,17 +156,17 @@ yunohost service add $app --description="An alternative Instagram front-end" --l
 ynh_script_progression --message="Starting a systemd service..." --weight=2
 
 # Start a systemd service
-ynh_systemd_action --service_name=$app --action="start" --log_path="systemd" --line_match="Server started"
+ynh_systemd_action --service_name=$app --action=start --log_path=systemd --line_match="Server started"
 
 #=================================================
 # SETUP SSOWAT
 #=================================================
-ynh_script_progression --message="Configuring SSOwat..." --weight=1
+ynh_script_progression --message="Configuring permissions..." --weight=1
 
 # Make app public if necessary or protect it
 if [ $is_public -eq 1 ]
 then
-	ynh_permission_update --permission "main" --add "visitors"
+	ynh_permission_update --permission="main" --add="visitors"
 fi
 
 #=================================================
