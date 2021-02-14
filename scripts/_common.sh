@@ -4,7 +4,7 @@
 # COMMON VARIABLES
 #=================================================
 
-nodejs_version=14
+nodejs_version=12
 
 #=================================================
 # PERSONAL HELPERS
@@ -17,6 +17,7 @@ nodejs_version=14
 #=================================================
 # FUTURE OFFICIAL HELPERS
 #=================================================
+
 
 # Check the architecture
 #
