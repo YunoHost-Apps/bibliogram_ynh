@@ -11,10 +11,10 @@
     "license": "AGPL-3.0-only",
     "maintainer": {
         "name": "eric_G",
-        "email": "ericgaspar@free.fr"
+        "email": ""
     },
     "requirements": {
-        "yunohost": ">= 4.1.0"
+        "yunohost": ">= 3.8.1"
     },
     "multi_instance": false,
     "services": [
