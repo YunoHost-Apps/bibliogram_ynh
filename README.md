@@ -1,7 +1,7 @@
 # Bibliogram for YunoHost
 
 [![Integration level](https://dash.yunohost.org/integration/bibliogram.svg)](https://dash.yunohost.org/appci/app/bibliogram) ![](https://ci-apps.yunohost.org/ci/badges/bibliogram.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/bibliogram.maintain.svg)  
-[![Install Bibliogram with YunoHost](https://install-app.yunohost.org/install-with-yunohost.png)](https://install-app.yunohost.org/?app=bibliogram)
+[![Install Bibliogram with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=bibliogram)
 
 *[Lire ce readme en français.](./README_fr.md)*
 
@@ -42,6 +42,10 @@ You can configure Bibliogram by editing this file `/var/www/bibliogram/config.js
 
 * x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/bibliogram%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/bibliogram/)
 * ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/bibliogram%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/bibliogram/)
+
+## Limitations
+
+> :warning: This package will not install in 32 bits architecture machine due to *n* framework not supporting NodeJS > v.9
 
 ## Links
 
