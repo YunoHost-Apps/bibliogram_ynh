@@ -81,23 +81,12 @@ if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Upgrading source files..." --weight=60
 
-	# Create a temporary directory
-	tmpdir="$(mktemp -d)"
-	
-	# Backup the config file in the temp dir
-	cp -a "$final_path/config.js" "$tmpdir/config.js"
-	
 	# Remove the app directory securely
 	ynh_secure_remove --file=$final_path
 
 	# Download from git source
 	git clone https://git.sr.ht/~cadence/bibliogram "$final_path" --quiet
 
-	#Copy the admin saved settings from tmp directory to final path	
-	cp -a "$tmpdir/config.js" "$final_path/config.js" 
-
-	# Remove the tmp directory securely
-	ynh_secure_remove --file="$tmpdir"
 fi
 
 #=================================================
@@ -146,16 +135,10 @@ fi
 #=================================================
 # MODIFY A CONFIG FILE
 #=================================================
-ynh_script_progression --message="Modifying a config file..." --weight=2
+ynh_script_progression --message="Modifying a config file..."
 
 ynh_backup_if_checksum_is_different --file="$final_path/config.js"
-
-cp ../conf/config.js "$final_path/config.js"
-
-# Main config File
-ynh_replace_string --match_string="__DOMAIN__" --replace_string="$domain" --target_file="$final_path/config.js"
-
-# Recalculate and store the checksum of the file for the next upgrade.
+ynh_add_config --template="../conf/config.js" --destination="$final_path/config.js"
 ynh_store_file_checksum --file="$final_path/config.js"
 
 #=================================================
@@ -177,7 +160,7 @@ ynh_add_systemd_config
 ynh_script_progression --message="Securing files and directories..."
 
 # Set permissions on app files
-chown -R $app:$app $final_path
+chown -R $app: $final_path
 
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST
