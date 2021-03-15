@@ -29,7 +29,7 @@ Vous pouvez configurer Bibliogram en modifiant le fichier `/var/www/bibliogram/c
 ## Documentation
 
  * Documentation officielle : https://git.sr.ht/~cadence/bibliogram-docs
- * Documentation YunoHost : https://yunohost.org/#/app_bibliogram_fr
+ * Documentation YunoHost : https://yunohost.org/fr/app_bibliogram
 
 ## Caractéristiques spécifiques YunoHost
 
