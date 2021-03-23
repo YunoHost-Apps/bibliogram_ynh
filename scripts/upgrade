@@ -113,7 +113,7 @@ ynh_install_extra_app_dependencies --repo="deb https://dl.yarnpkg.com/debian/ st
 ynh_script_progression --message="Making sure dedicated system user exists..." --weight=1
 
 # Create a dedicated user (if not existing)
-ynh_system_user_create --username=$app
+ynh_system_user_create --username=$app --home_dir=$final_path
 
 #=================================================
 # SPECIFIC UPGRADE
@@ -159,6 +159,7 @@ ynh_script_progression --message="Securing files and directories..."
 
 # Set permissions on app files
 chown -R $app: $final_path
+chmod 600 $final_path/config.js
 
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST

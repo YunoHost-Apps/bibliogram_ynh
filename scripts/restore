@@ -62,7 +62,7 @@ ynh_restore_file --origin_path="$final_path"
 ynh_script_progression --message="Recreating the dedicated system user..." --weight=1
 
 # Create the dedicated user (if not existing)
-ynh_system_user_create --username=$app
+ynh_system_user_create --username=$app --home_dir=$final_path
 
 #=================================================
 # RESTORE USER RIGHTS
@@ -71,6 +71,7 @@ ynh_script_progression --message="Restoring user rights..."
 
 # Restore permissions on app files
 chown -R $app: $final_path
+chmod 600 $final_path/config.js
 
 #=================================================
 # SPECIFIC RESTORATION
