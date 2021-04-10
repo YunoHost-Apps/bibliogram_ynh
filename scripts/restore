@@ -45,14 +45,14 @@ test ! -d $final_path \
 #=================================================
 # RESTORE THE NGINX CONFIGURATION
 #=================================================
-ynh_script_progression --message="Restoring the NGINX configuration..."
+ynh_script_progression --message="Restoring the NGINX configuration..." --weight=2
 
 ynh_restore_file --origin_path="/etc/nginx/conf.d/$domain.d/$app.conf"
 
 #=================================================
 # RESTORE THE APP MAIN DIR
 #=================================================
-ynh_script_progression --message="Restoring the app main directory..." --weight=10
+ynh_script_progression --message="Restoring the app main directory..." --weight=2
 
 ynh_restore_file --origin_path="$final_path"
 
@@ -67,10 +67,10 @@ ynh_system_user_create --username=$app --home_dir=$final_path
 #=================================================
 # RESTORE USER RIGHTS
 #=================================================
-ynh_script_progression --message="Restoring user rights..."
+ynh_script_progression --message="Restoring user rights..." --weight=1
 
-# Restore permissions on app files
 chown -R $app: $final_path
+chmod -R 750 $final_path/node_modules
 chmod 600 $final_path/config.js
 
 #=================================================
@@ -78,7 +78,7 @@ chmod 600 $final_path/config.js
 #=================================================
 # REINSTALL DEPENDENCIES
 #=================================================
-ynh_script_progression --message="Reinstalling dependencies..." --weight=4
+ynh_script_progression --message="Reinstalling dependencies..." --weight=2
 
 # Define and install dependencies
 ynh_install_app_dependencies $pkg_dependencies
