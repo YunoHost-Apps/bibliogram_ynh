@@ -155,8 +155,9 @@ ynh_add_systemd_config
 #=================================================
 ynh_script_progression --message="Securing files and directories..." --weight=2
 
-chown -R $app: $final_path
-chmod -R 750 $final_path/node_modules
+chmod 750 "$final_path"
+chmod -R o-rwx "$final_path"
+chown -R $app:www-data "$final_path"
 chmod 600 $final_path/config.js
 
 #=================================================

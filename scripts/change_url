@@ -105,7 +105,7 @@ fi
 #=================================================
 ynh_script_progression --message="Modifying a config file..." --weight=4
 
-domain=$new_domain
+domain="$new_domain"
 ynh_add_config --template="../conf/config.js" --destination="$final_path/config.js"
 
 #=================================================
