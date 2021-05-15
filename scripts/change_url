@@ -30,7 +30,7 @@ ynh_script_progression --message="Loading installation settings..." --weight=1
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
 
 #=================================================
-# BACKUP BEFORE UPGRADE THEN ACTIVE TRAP
+# BACKUP BEFORE CHANGE URL THEN ACTIVE TRAP
 #=================================================
 ynh_script_progression --message="Backing up the app before changing its URL (may take a while)..." --weight=1
 
@@ -108,6 +108,9 @@ ynh_script_progression --message="Modifying a config file..." --weight=4
 domain="$new_domain"
 ynh_add_config --template="../conf/config.js" --destination="$final_path/config.js"
 
+chmod 600 "$final_path/config.js"
+chown $app:$app "$final_path/config.js"
+
 #=================================================
 # GENERIC FINALISATION
 #=================================================
@@ -115,7 +118,7 @@ ynh_add_config --template="../conf/config.js" --destination="$final_path/config.
 #=================================================
 ynh_script_progression --message="Starting a systemd service..." --weight=1
 
-ynh_systemd_action --service_name=$app --action=start --log_path=systemd --line_match="Server started"
+ynh_systemd_action --service_name=$app --action="start" --log_path=systemd --line_match="Server started"
 
 #=================================================
 # RELOAD NGINX
