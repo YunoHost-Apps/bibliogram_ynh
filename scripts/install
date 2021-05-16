@@ -97,6 +97,10 @@ ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 # Note: We use git instead of ynh_setup_source, cause this repo use submodules
 git clone https://git.sr.ht/~cadence/bibliogram "$final_path" --quiet
 
+chmod 750 "$final_path"
+chmod -R o-rwx "$final_path"
+chown -R $app:www-data "$final_path"
+
 #=================================================
 # NGINX CONFIGURATION
 #=================================================
@@ -114,38 +118,29 @@ ynh_script_progression --message="Building $app... (this will take some time and
 
 pushd "$final_path" || ynh_die
 	ynh_use_nodejs
-	ynh_exec_warn_less yarn install --no-optional
+	ynh_exec_warn_less sudo -u $app $ynh_node_load_PATH yarn install --no-optional
 popd || ynh_die
+
+#=================================================
+# MODIFY A CONFIG FILE
+#=================================================
+ynh_script_progression --message="Adding a configuration file..."
+
+ynh_add_config --template="../conf/config.js" --destination="$final_path/config.js"
+
+chmod 600 "$final_path/config.js"
+chown $app:$app "$final_path/config.js"
 
 #=================================================
 # SETUP SYSTEMD
 #=================================================
 ynh_script_progression --message="Configuring a systemd service..." --weight=1
 
-ynh_replace_string --match_string="__ENV_PATH__" --replace_string="$PATH"    --target_file="../conf/systemd.service"
-ynh_replace_string --match_string="__YNH_NPM__"  --replace_string="$ynh_npm" --target_file="../conf/systemd.service"
-
+# Create a dedicated systemd config
 ynh_add_systemd_config
 
 #=================================================
-# MODIFY A CONFIG FILE
-#=================================================
-ynh_script_progression --message="Modifying a config file..."
-
-ynh_add_config --template="../conf/config.js" --destination="$final_path/config.js"
-
-#=================================================
 # GENERIC FINALIZATION
-#=================================================
-# SECURE FILES AND DIRECTORIES
-#=================================================
-ynh_script_progression --message="Securing files and directories..."
-
-# Set permissions to app files
-chown -R $app: $final_path
-chmod -R 750 $final_path/node_modules
-chmod 600 $final_path/config.js
-
 #=================================================
 # INTEGRATE SERVICE IN YUNOHOST
 #=================================================
@@ -159,14 +154,14 @@ yunohost service add $app --description="An alternative Instagram front-end" --l
 ynh_script_progression --message="Starting a systemd service..." --weight=2
 
 # Start a systemd service
-ynh_systemd_action --service_name=$app --action=start --log_path=systemd --line_match="Server started"
+ynh_systemd_action --service_name=$app --action="start" --log_path=systemd --line_match="Server started"
 
 #=================================================
 # SETUP SSOWAT
 #=================================================
 ynh_script_progression --message="Configuring permissions..." --weight=1
 
-# Make app public if necessary or protect it
+# Make app public if necessary
 if [ $is_public -eq 1 ]
 then
 	ynh_permission_update --permission="main" --add="visitors"
