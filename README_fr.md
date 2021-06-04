@@ -3,58 +3,38 @@
 [![Niveau d'intégration](https://dash.yunohost.org/integration/bibliogram.svg)](https://dash.yunohost.org/appci/app/bibliogram) ![](https://ci-apps.yunohost.org/ci/badges/bibliogram.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/bibliogram.maintain.svg)  
 [![Installer Bibliogram avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=bibliogram)
 
-*[Read this readme in english.](./README.md)* 
+*[Read this readme in english.](./README.md)*
+*[Lire ce readme en français.](./README_fr.md)*
 
-> *Ce package vous permet d'installer Bibliogram rapidement et simplement sur un serveur YunoHost.  
-Si vous n'avez pas YunoHost, consultez [le guide](https://yunohost.org/#/install) pour apprendre comment l'installer.*
+> *Ce package vous permet d'installer Bibliogram rapidement et simplement sur un serveur YunoHost.
+Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
 
 ## Vue d'ensemble
 
-Bibliogram est un site Web qui prend les données de profil public d'Instagram et les met dans une page plus conviviale qui se charge plus rapidement, donne des images téléchargeables, élimine les publicités, génère des flux RSS et ne vous invite pas à vous inscrire.
+Une interface alternative pour Instagram 
 
-**Version incluse :** 1.0.0
+**Version incluse :** 1.0.0~ynh8
+
+**Démo :** https://bibliogram.art/
 
 ## Captures d'écran
 
-![](sources/bibliogram.jpg)
+![](./doc/screenshots/bibliogram.jpg)
 
-## Démo
-
-* [Démo officielle](https://bibliogram.art/)
+## Avertissements / informations importantes
 
 ## Configuration
+
 Bibliogram s'installe sur un domaine dédié comme `bibliogram.domain.tld`.  
 Vous pouvez configurer Bibliogram en modifiant le fichier `/var/www/bibliogram/config.js` et en vous aidant de la [documentation](https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Configuring.md)
 
-## Documentation
+## Documentations et ressources
 
- * Documentation officielle : https://git.sr.ht/~cadence/bibliogram-docs
- * Documentation YunoHost : https://yunohost.org/fr/app_bibliogram
-
-## Caractéristiques spécifiques YunoHost
-
-#### Support multi-utilisateur
-
-* L'authentification LDAP est-elle prise en charge ? **Non**
-* L'application peut-elle être utilisée par plusieurs utilisateurs ? **Oui**
-
-#### Architectures supportées
-
-* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/bibliogram.svg)](https://ci-apps.yunohost.org/ci/apps/bibliogram/)
-* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/bibliogram.svg)](https://ci-apps-arm.yunohost.org/ci/apps/bibliogram/)
-
-
-## Limitations
-
-> :warning: Ce package ne peut pas être installé sur une machine à architecture 32 bits car le framework *n* ne prend pas en charge NodeJS > v.9
-
-## Liens
-
- * Signaler un bug : https://github.com/YunoHost-Apps/bibliogram_ynh/issues
- * Dépôt de l'application principale : https://git.sr.ht/~cadence/bibliogram
- * Site web YunoHost : https://yunohost.org/
-
----
+* Documentation officielle utilisateur : https://yunohost.org/en/app_bibliogram
+* Documentation officielle de l'admin : https://git.sr.ht/~cadence/bibliogram-docs
+* Dépôt de code officiel de l'app : https://git.sr.ht/~cadence/bibliogram
+* Documentation YunoHost pour cette app : https://yunohost.org/app_bibliogram
+* Signaler un bug : https://github.com/YunoHost-Apps/bibliogram_ynh/issues
 
 ## Informations pour les développeurs
 
@@ -66,3 +46,5 @@ sudo yunohost app install https://github.com/YunoHost-Apps/bibliogram_ynh/tree/t
 ou
 sudo yunohost app upgrade bibliogram -u https://github.com/YunoHost-Apps/bibliogram_ynh/tree/testing --debug
 ```
+
+**Plus d'infos sur le packaging d'applications :** https://yunohost.org/packaging_apps
