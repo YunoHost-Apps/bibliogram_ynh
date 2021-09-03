@@ -11,7 +11,8 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Vue d'ensemble
 
-Une interface alternative pour Instagram 
+Bibliogram works without browser JavaScript, has no ads or tracking, and doesn't urge you to sign up.
+
 
 **Version incluse :** 1.0.0~ynh8
 
