@@ -35,7 +35,6 @@ You can configure Bibliogram by editing this file `/var/www/bibliogram/config.js
 
 ## Documentation and resources
 
-* Official user documentation: https://yunohost.org/en/app_bibliogram
 * Official admin documentation: https://git.sr.ht/~cadence/bibliogram-docs
 * Upstream app code repository: https://git.sr.ht/~cadence/bibliogram
 * YunoHost documentation for this app: https://yunohost.org/app_bibliogram
