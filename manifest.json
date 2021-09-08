@@ -12,7 +12,6 @@
         "license": "AGPL-3.0-only",
         "demo": "https://bibliogram.art/",
         "admindoc": "https://git.sr.ht/~cadence/bibliogram-docs",
-        "userdoc": "https://yunohost.org/en/app_bibliogram",
         "code": "https://git.sr.ht/~cadence/bibliogram"
     },
     "license": "AGPL-3.0-only",
