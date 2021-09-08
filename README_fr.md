@@ -31,7 +31,6 @@ Vous pouvez configurer Bibliogram en modifiant le fichier `/var/www/bibliogram/c
 
 ## Documentations et ressources
 
-* Documentation officielle utilisateur : https://yunohost.org/en/app_bibliogram
 * Documentation officielle de l'admin : https://git.sr.ht/~cadence/bibliogram-docs
 * Dépôt de code officiel de l'app : https://git.sr.ht/~cadence/bibliogram
 * Documentation YunoHost pour cette app : https://yunohost.org/app_bibliogram
