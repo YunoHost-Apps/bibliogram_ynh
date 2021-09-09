@@ -97,6 +97,10 @@ ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 # Note: We use git instead of ynh_setup_source, cause this repo use submodules
 git clone https://git.sr.ht/~cadence/bibliogram "$final_path" --quiet
 
+pushd "$final_path"
+	git reset --hard --quiet $version_commit
+popd
+
 chmod 750 "$final_path"
 chmod -R o-rwx "$final_path"
 chown -R $app:www-data "$final_path"
