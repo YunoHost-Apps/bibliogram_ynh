@@ -3,8 +3,8 @@
     "id": "bibliogram",
     "packaging_format": 1,
     "description": {
-        "en": "An alternative Instagram front-end",
-        "fr": "Une interface alternative pour Instagram "
+        "en": "Alternative Instagram front-end",
+        "fr": "Interface alternative pour Instagram"
     },
     "version": "1.0.0~ynh9",
     "url": "https://git.sr.ht/~cadence/bibliogram",
