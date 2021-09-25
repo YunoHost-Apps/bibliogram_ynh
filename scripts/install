@@ -97,6 +97,10 @@ ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 # Note: We use git instead of ynh_setup_source, cause this repo use submodules
 git clone https://git.sr.ht/~cadence/bibliogram "$final_path" --quiet
 
+pushd "$final_path"
+	git reset --hard --quiet $version_commit
+popd
+
 chmod 750 "$final_path"
 chmod -R o-rwx "$final_path"
 chown -R $app:www-data "$final_path"
@@ -146,7 +150,7 @@ ynh_add_systemd_config
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..."
 
-yunohost service add $app --description="An alternative Instagram front-end" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="Alternative Instagram front-end" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE

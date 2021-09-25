@@ -3,16 +3,15 @@
     "id": "bibliogram",
     "packaging_format": 1,
     "description": {
-        "en": "An alternative Instagram front-end",
-        "fr": "Une interface alternative pour Instagram "
+        "en": "Alternative Instagram front-end",
+        "fr": "Interface alternative pour Instagram"
     },
-    "version": "1.0.0~ynh8",
+    "version": "1.0.0~ynh9",
     "url": "https://git.sr.ht/~cadence/bibliogram",
     "upstream": {
         "license": "AGPL-3.0-only",
         "demo": "https://bibliogram.art/",
         "admindoc": "https://git.sr.ht/~cadence/bibliogram-docs",
-        "userdoc": "https://yunohost.org/en/app_bibliogram",
         "code": "https://git.sr.ht/~cadence/bibliogram"
     },
     "license": "AGPL-3.0-only",
@@ -35,8 +34,7 @@
                 "help": {
                     "en": "Bibliogram needs to be installed in a root domain or subdomain",
                     "fr": "Bibliogram doit être installé dans un domaine racine ou un sous-domaine"
-                },
-                "example": "bibliogram.domain.org"
+                }
             },
             {
                 "name": "is_public",

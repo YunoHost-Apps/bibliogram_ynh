@@ -17,7 +17,10 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 An alternative Instagram front-end
 
-**Shipped version:** 1.0.0~ynh8
+Bibliogram works without browser JavaScript, has no ads or tracking, and doesn't urge you to sign up.
+
+
+**Shipped version:** 1.0.0~ynh9
 
 **Demo:** https://bibliogram.art/
 
@@ -34,7 +37,6 @@ You can configure Bibliogram by editing this file `/var/www/bibliogram/config.js
 
 ## Documentation and resources
 
-* Official user documentation: https://yunohost.org/en/app_bibliogram
 * Official admin documentation: https://git.sr.ht/~cadence/bibliogram-docs
 * Upstream app code repository: https://git.sr.ht/~cadence/bibliogram
 * YunoHost documentation for this app: https://yunohost.org/app_bibliogram

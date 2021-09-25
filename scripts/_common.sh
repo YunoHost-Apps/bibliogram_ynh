@@ -9,6 +9,8 @@ pkg_dependencies="graphicsmagick"
 
 nodejs_version=12
 
+version_commit=f14837be448ff2dc2acfd14493437299453fac3d 
+
 #=================================================
 # PERSONAL HELPERS
 #=================================================

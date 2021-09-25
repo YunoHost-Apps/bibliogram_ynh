@@ -36,8 +36,6 @@ final_path=$(ynh_app_setting_get --app=$app --key=final_path)
 #=================================================
 ynh_script_progression --message="Validating restoration parameters..." --weight=2
 
-ynh_webpath_available --domain=$domain --path_url=$path_url \
-	|| ynh_die --message="Path not available: ${domain}${path_url}"
 test ! -d $final_path \
 	|| ynh_die --message="There is already a directory: $final_path "
 
@@ -102,7 +100,7 @@ systemctl enable $app.service --quiet
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..."
 
-yunohost service add $app --description="An alternative Instagram front-end" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="Alternative Instagram front-end" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE
