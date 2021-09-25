@@ -34,8 +34,7 @@
                 "help": {
                     "en": "Bibliogram needs to be installed in a root domain or subdomain",
                     "fr": "Bibliogram doit être installé dans un domaine racine ou un sous-domaine"
-                },
-                "example": "bibliogram.domain.org"
+                }
             },
             {
                 "name": "is_public",
