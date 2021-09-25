@@ -11,6 +11,8 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Vue d'ensemble
 
+An alternative Instagram front-end
+
 Bibliogram works without browser JavaScript, has no ads or tracking, and doesn't urge you to sign up.
 
 
