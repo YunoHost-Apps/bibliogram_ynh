@@ -26,6 +26,7 @@ ynh_abort_if_errors
 domain=$YNH_APP_ARG_DOMAIN
 path_url="/"
 is_public=$YNH_APP_ARG_IS_PUBLIC
+architecture=$YNH_ARCH
 
 app=$YNH_APP_INSTANCE_NAME
 
@@ -116,14 +117,14 @@ ynh_add_nginx_config
 #=================================================
 # SPECIFIC SETUP
 #==============================================
-# INSTALL HEDGEDOC
+# INSTALL BIBLIOGRAM
 #==============================================
 ynh_script_progression --message="Building $app... (this will take some time and resources!)" --weight=20
 
-pushd "$final_path" || ynh_die
+pushd "$final_path"
 	ynh_use_nodejs
 	ynh_exec_warn_less sudo -u $app $ynh_node_load_PATH yarn install --no-optional
-popd || ynh_die
+popd
 
 #=================================================
 # MODIFY A CONFIG FILE
