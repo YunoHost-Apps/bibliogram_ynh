@@ -11,7 +11,7 @@
 		setup_private=1
 		setup_public=1
 		upgrade=1
-		upgrade=1	from_commit=a2fc01d4ad6d8d79e2ee2d264e5878e3e380807c
+		#upgrade=1	from_commit=c68a5c5e66a52b8913ac344034a401051f04c16b
 		backup_restore=1
 		multi_instance=0
 		change_url=1
@@ -19,7 +19,7 @@
 Email=
 Notification=none
 ;;; Upgrade options
-	; commit=a2fc01d4ad6d8d79e2ee2d264e5878e3e380807c
-		name=Fix linter warnings
+	; commit=c68a5c5e66a52b8913ac344034a401051f04c16b
+		name=Merge pull request #24 
 		manifest_arg=domain=DOMAIN&path=PATH&admin=USER&language=fr&is_public=1&password=pass&port=666&
 
