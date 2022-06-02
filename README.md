@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # Bibliogram for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/bibliogram.svg)](https://dash.yunohost.org/appci/app/bibliogram) ![](https://ci-apps.yunohost.org/ci/badges/bibliogram.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/bibliogram.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/bibliogram.svg)](https://dash.yunohost.org/appci/app/bibliogram) ![Working status](https://ci-apps.yunohost.org/ci/badges/bibliogram.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/bibliogram.maintain.svg)  
 [![Install Bibliogram with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=bibliogram)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -26,7 +26,7 @@ Bibliogram works without browser JavaScript, has no ads or tracking, and doesn't
 
 ## Screenshots
 
-![](./doc/screenshots/bibliogram.jpg)
+![Screenshot of Bibliogram](./doc/screenshots/bibliogram.jpg)
 
 ## Disclaimers / important information
 
@@ -37,20 +37,21 @@ You can configure Bibliogram by editing this file `/var/www/bibliogram/config.js
 
 ## Documentation and resources
 
-* Official admin documentation: https://git.sr.ht/~cadence/bibliogram-docs
-* Upstream app code repository: https://git.sr.ht/~cadence/bibliogram
-* YunoHost documentation for this app: https://yunohost.org/app_bibliogram
-* Report a bug: https://github.com/YunoHost-Apps/bibliogram_ynh/issues
+* Official admin documentation: <https://git.sr.ht/~cadence/bibliogram-docs>
+* Upstream app code repository: <https://git.sr.ht/~cadence/bibliogram>
+* YunoHost documentation for this app: <https://yunohost.org/app_bibliogram>
+* Report a bug: <https://github.com/YunoHost-Apps/bibliogram_ynh/issues>
 
 ## Developer info
 
 Please send your pull request to the [testing branch](https://github.com/YunoHost-Apps/bibliogram_ynh/tree/testing).
 
 To try the testing branch, please proceed like that.
-```
+
+``` bash
 sudo yunohost app install https://github.com/YunoHost-Apps/bibliogram_ynh/tree/testing --debug
 or
 sudo yunohost app upgrade bibliogram -u https://github.com/YunoHost-Apps/bibliogram_ynh/tree/testing --debug
 ```
 
-**More info regarding app packaging:** https://yunohost.org/packaging_apps
+**More info regarding app packaging:** <https://yunohost.org/packaging_apps>
