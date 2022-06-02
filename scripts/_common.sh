@@ -7,7 +7,7 @@
 # dependencies used by the app
 pkg_dependencies="graphicsmagick"
 
-nodejs_version=18
+nodejs_version=16
 
 version_commit=6b726229397c035b2f7d84cbb4858a939f93d356
 
