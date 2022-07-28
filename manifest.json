@@ -6,7 +6,7 @@
         "en": "Alternative Instagram front-end",
         "fr": "Interface alternative pour Instagram"
     },
-    "version": "1.0.0~ynh13",
+    "version": "1.0.0~ynh14",
     "url": "https://git.sr.ht/~cadence/bibliogram",
     "upstream": {
         "license": "AGPL-3.0-only",
