@@ -22,6 +22,7 @@ Bibliogram works without browser JavaScript, has no ads or tracking, and doesn't
 
 **Shipped version:** 1.0.0~ynh15
 
+
 **Demo:** https://bibliogram.art/
 
 ## Screenshots
