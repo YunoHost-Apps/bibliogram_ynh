@@ -20,7 +20,8 @@ An alternative Instagram front-end
 Bibliogram works without browser JavaScript, has no ads or tracking, and doesn't urge you to sign up.
 
 
-**Version incluse :** 1.0.0~ynh15
+**Version incluse :** 1.0.0~ynh16
+
 
 **Démo :** https://bibliogram.art/
 
