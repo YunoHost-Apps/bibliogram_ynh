@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # Bibliogram for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/bibliogram.svg)](https://dash.yunohost.org/appci/app/bibliogram) ![Working status](https://ci-apps.yunohost.org/ci/badges/bibliogram.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/bibliogram.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/bibliogram.svg)](https://dash.yunohost.org/appci/app/bibliogram) ![Working status](https://ci-apps.yunohost.org/ci/badges/bibliogram.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/bibliogram.maintain.svg)
 [![Install Bibliogram with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=bibliogram)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -20,8 +20,7 @@ An alternative Instagram front-end
 Bibliogram works without browser JavaScript, has no ads or tracking, and doesn't urge you to sign up.
 
 
-**Shipped version:** 1.0.0~ynh16
-
+**Shipped version:** 1.0.0~ynh17
 
 **Demo:** https://bibliogram.art/
 
@@ -35,6 +34,12 @@ Bibliogram works without browser JavaScript, has no ads or tracking, and doesn't
 
 Bibliogram requires dedicated domain like `bibliogram.domain.tld`.  
 You can configure Bibliogram by editing this file `/var/www/bibliogram/config.js` using this the [documentation](https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Configuring.md)
+
+## :red_circle: Antifeatures
+
+- **Non-free Network Services**: Promotes or depends entirely on a non-free network service.
+
+- **Upstream not maintained**: This software is not maintained anymore. Expect it to break down over time, be exposed to unfixed security breaches, etc.
 
 ## Documentation and resources
 

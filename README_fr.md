@@ -5,29 +5,28 @@ It shall NOT be edited by hand.
 
 # Bibliogram pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/bibliogram.svg)](https://dash.yunohost.org/appci/app/bibliogram) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/bibliogram.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/bibliogram.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/bibliogram.svg)](https://dash.yunohost.org/appci/app/bibliogram) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/bibliogram.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/bibliogram.maintain.svg)
 [![Installer Bibliogram avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=bibliogram)
 
 *[Read this readme in english.](./README.md)*
 
-> *Ce package vous permet d'installer Bibliogram rapidement et simplement sur un serveur YunoHost.
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d’installer Bibliogram rapidement et simplement sur un serveur YunoHost.
+Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
-## Vue d'ensemble
+## Vue d’ensemble
 
 An alternative Instagram front-end
 
 Bibliogram works without browser JavaScript, has no ads or tracking, and doesn't urge you to sign up.
 
 
-**Version incluse :** 1.0.0~ynh16
-
+**Version incluse :** 1.0.0~ynh17
 
 **Démo :** https://bibliogram.art/
 
-## Captures d'écran
+## Captures d’écran
 
-![Capture d'écran de Bibliogram](./doc/screenshots/bibliogram.jpg)
+![Capture d’écran de Bibliogram](./doc/screenshots/bibliogram.jpg)
 
 ## Avertissements / informations importantes
 
@@ -36,10 +35,16 @@ Bibliogram works without browser JavaScript, has no ads or tracking, and doesn't
 Bibliogram s'installe sur un domaine dédié comme `bibliogram.domain.tld`.  
 Vous pouvez configurer Bibliogram en modifiant le fichier `/var/www/bibliogram/config.js` et en vous aidant de la [documentation](https://git.sr.ht/~cadence/bibliogram-docs/tree/master/docs/Configuring.md)
 
+## :red_circle: Fonctions indésirables
+
+- **Non-free Network Services**: Promotes or depends entirely on a non-free network service.
+
+- **Upstream not maintained**: This software is not maintained anymore. Expect it to break down over time, be exposed to unfixed security breaches, etc.
+
 ## Documentations et ressources
 
-* Documentation officielle de l'admin : <https://git.sr.ht/~cadence/bibliogram-docs>
-* Dépôt de code officiel de l'app : <https://git.sr.ht/~cadence/bibliogram>
+* Documentation officielle de l’admin : <https://git.sr.ht/~cadence/bibliogram-docs>
+* Dépôt de code officiel de l’app : <https://git.sr.ht/~cadence/bibliogram>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_bibliogram>
 * Signaler un bug : <https://github.com/YunoHost-Apps/bibliogram_ynh/issues>
 
@@ -55,4 +60,4 @@ ou
 sudo yunohost app upgrade bibliogram -u https://github.com/YunoHost-Apps/bibliogram_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>
